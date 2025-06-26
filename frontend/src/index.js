@@ -21,6 +21,8 @@ import Login from './landing_page/signup/Login';
 
 
 
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -35,6 +37,8 @@ root.render(
       <Route path='/pricing' element={<PricingPage/>}/>
       <Route path='/support' element={<SupportPage/>}/>
       <Route path='/*' element={<NotFound/>}/>
+
+      
 
 
 
