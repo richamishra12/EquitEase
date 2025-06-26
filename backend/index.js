@@ -1,3 +1,4 @@
+
 require('dotenv').config();   
 const express=require("express");
 const mongoose=require("mongoose"); //for connection establishment
@@ -225,16 +226,7 @@ app.post("/newOrder",async(req,res)=>{
 
     });
 
-    
-
-app.listen(PORT,()=>{
-    console.log("app started!");
-    mongoose.connect(url); //connection established
-    console.log("DB connected!"); //database connected
-});
-
-
-    app.use(
+     app.use(
   cors({
     origin: ["http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "DELETE"],
@@ -246,3 +238,14 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use("/", authRoute);
+
+    
+
+app.listen(PORT,()=>{
+    console.log("app started!");
+    mongoose.connect(url); //connection established
+    console.log("DB connected!"); //database connected
+});
+
+
+   
